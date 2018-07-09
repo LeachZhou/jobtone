@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    transition: all .6s ease;
 }
 
 ul, ol {
@@ -30,11 +31,15 @@ p {
 }
 
 .sec1 {
-    background: #ffffff url("http://via.placeholder.com/1920x1000/D3FF33") center no-repeat;
-    background-size: 100% 100vh;
+    background: #ffffff url("images/banner_01.jpg") center no-repeat;
+    background-size: cover;
 }
 
 .sec1 .con {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     text-align: center;
     color: #ffffff;
 }
@@ -56,9 +61,11 @@ p {
     padding: 25px 10px 10px;
     text-align: center;
     background: transparent;
+    transition: all .6s ease;
 }
 
-.sec1 .nav-con li.active {
+.sec1 .nav-con li.active, .sec1 .nav-con li:hover {
+    transition: all .6s ease;
     background: #ff6d00;
 }
 
@@ -83,39 +90,45 @@ p {
     background: #000000;
     margin-top: 5px;
     cursor: pointer;
+    transition: all .6s ease;
 }
 
 .sec2 {
+    position: relative;
     text-align: center;
 }
 
+.sec2 .layer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 .sec2 h2 {
-    font-size: 50px;
+    font-size: 40px;
 }
 
 .sec2 .title-en {
     font-size: 24px;
-    margin-top: 16px;
+    margin-top: 10px;
     color: #bebebe;
 }
 
 .sec2 .des {
-    margin-top: 75px;
+    margin-top: 35px;
     font-size: 14px;
     color: #7c7c7c;
 }
 
 .sec2 ul {
     overflow: auto;
-    margin-top: 80px;
+    margin: 40px auto 0;
 }
 
 .sec2 li {
-    float: left;
-    width: 272px;
     text-align: center;
     border-radius: 5px;
-    margin-right: 22px;
     border: 1px solid #ffffff;
     cursor: pointer;
 }
@@ -150,11 +163,17 @@ p {
 
 .sec2 li h3 {
     font-size: 24px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .sec2 li p {
-    height: 80px;
     overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
     color: #b1b1b1;
     padding: 0 5px;
     margin-bottom: 20px;
@@ -170,4 +189,156 @@ p {
 
 .sec2 li:hover {
     border: 1px solid #b1b1b1;
+}
+
+.sec2-btn-group {
+
+}
+
+.sec2-btn-group button {
+    border: 1px solid #bebebe;
+    color: #7c7c7c;
+    font-size: 24px;
+    background: #ffffff;
+    border-radius: 30px;
+    padding: 10px 60px;
+    margin: 40px 20px 0;
+}
+
+.sec2-btn-group button:hover {
+    border: 1px solid #bebebe;
+    color: #ffffff;
+    background: #bebebe;
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: #ffffff;
+}
+
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-nav > .active > a:hover {
+    color: #ffffff;
+    background-color: transparent;
+}
+
+.navbar-default .navbar-nav > li > a:focus, .navbar-default .navbar-nav > li > a:hover {
+    color: #ffffff;
+    background-color: transparent;
+}
+
+.navbar-brand .logo {
+    width: 184px;
+    height: 60px;
+    transition: all .6s ease;
+    object-fit: cover;
+}
+
+.sec1 .con h1 {
+    transition: all .6s ease;
+}
+
+#fp-nav ul li a span, .fp-slidesNav ul li a span {
+    background: #8d8d8d !important;
+}
+
+@media (max-width: 768px) {
+    .navbar-brand .logo {
+        transition: all .6s ease;
+        transform: translate(0px, -8px);
+        width: 110px;
+        height: 36px;
+        object-fit: cover;
+    }
+
+    .sec1 .nav-con {
+        top: 48px;
+        left: 0px;
+    }
+
+    .sec1 .nav-con li {
+        width: 100%;
+        padding: 0;
+        background: #ffffff;
+        border-bottom: 1px solid rgba(177, 177, 177, 0.3);
+    }
+
+    .sec1 .nav-con li a {
+        color: #000000;
+    }
+
+    .navbar-nav {
+        margin: 0 -15px;
+    }
+
+    .fixed-slide li {
+        width: 36px;
+        height: 36px;
+        line-height: 36px;
+        transition: all .6s ease;
+
+    }
+
+    .fixed-slide li img {
+        width: 36px;
+        height: 36px;
+        transition: all .6s ease;
+
+    }
+
+    .sec1 .con h1 {
+        font-size: 24px;
+        transition: all .6s ease;
+    }
+
+    .sec2 li {
+        text-align: center;
+        border-radius: 5px;
+        margin: 0;
+        border: 0;
+        cursor: pointer;
+        padding: 0 0 0 15px;
+    }
+
+    .sec2 li:nth-child(2n) {
+        padding: 0 15px 0 0;
+    }
+
+    .sec2 li .img-num {
+        position: relative;
+        width: 100%;
+        height: 102px;
+        background: #ffffff;
+    }
+
+    .sec2 li .img-num h4 {
+        font-size: 45px;
+        color: #7c7c7c;
+        line-height: 102px;
+        margin: 0;
+    }
+
+    .sec2 li .img-num img {
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 102px;
+        object-fit: cover;
+    }
+
+    .sec2 .des {
+        word-break: break-all;
+    }
+
+    .sec2 li:hover .img-num img {
+        display: block;
+    }
+
+    .sec2 li:hover .img-num h4 {
+        display: block;
+    }
+
+    .sec2 li:hover {
+        border: 0;
+    }
 }
