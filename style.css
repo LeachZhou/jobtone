@@ -555,7 +555,166 @@ p {
     margin-bottom: 50px;
 }
 
+.modal-dialog {
+    width: 730px;
+    position: absolute !important;
+    left: 50% !important;
+    top: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    margin: 0;
+}
+
+#personal .modal-dialog {
+    width: 900px;
+}
+
+#enReg .modal-dialog {
+    width: 850px;
+}
+
+#enReg label {
+    text-align: left;
+    color: #8d8d8d;
+}
+
+#enLogin .modal-body, #forget .modal-body, #personal .modal-body, #enReg .modal-body {
+    padding: 50px 200px;
+}
+
+.enLogin {
+    text-align: center;
+}
+
+.enLogin h3 {
+    margin-bottom: 50px;
+}
+
+.enLogin input {
+    margin-bottom: 20px;
+}
+
+.enLogin input {
+    margin-bottom: 20px;
+}
+
+.enLogin a {
+    color: #000000;
+    text-decoration: none;
+}
+
+.enLogin-btn {
+    width: 100%;
+    background: #ff6d00;
+    border: 1px solid #ff6d00;
+    color: #ffffff;
+    margin: 20px 0;
+}
+
+.radio label {
+    float: left;
+    margin-right: 0;
+    transform: translate(14px, -20px);
+    padding-left: 50px !important;
+}
+
+.radio label:first-child {
+    padding-left: 20px !important;
+}
+
+.radio input[type='radio'] {
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #ffffff;
+    border: 1px solid #a3a3a3;
+    border-radius: 50%;
+    margin-left: 0;
+    transform: translate(-30px, -5px);
+}
+
+.radio input[type='radio']:checked {
+    background: #ff6d00;
+    border: 1px solid #ff6d00;
+}
+
+.code input {
+    border-radius: 4px 0 0 4px;
+}
+
+.code button {
+    border-radius: 0 4px 4px 0;
+    border: 0;
+    height: 34px;
+}
+
+.control-label {
+    line-height: 34px;
+}
+
+#enRegSubmit {
+    width: calc(100% - 100px);
+    margin: 0 50px;
+}
+
+.tryout-input1 {
+    padding: 0 15px 0 35px;
+}
+
+.tryout-input2 {
+    padding: 0 35px 0 15px;
+}
+
+.tryout-input3 {
+    width: calc(100% - 70px);
+    margin: 0 35px;
+}
+
 @media (max-width: 768px) {
+    .tryout-input1 {
+        padding: 0;
+    }
+
+    .tryout-input2 {
+        padding: 0;
+    }
+
+    .tryout-input3 {
+        width: 100%;
+        margin: 0;
+    }
+
+    #enLogin .enLogin, #forget .enLogin {
+        overflow: auto;
+    }
+
+    .modal-dialog {
+        width: auto;
+    }
+
+    #enReg .enLogin, #enLogin .enLogin, #forget .enLogin {
+        margin: 0 15px;
+    }
+
+    #enReg .modal-dialog {
+        width: auto;
+    }
+
+    .enLogin h3 {
+        margin-bottom: 30px;
+    }
+
+    #personal p {
+        margin: 0 15px;
+    }
+
+    #personal .modal-dialog {
+        width: auto;
+    }
+
+    #enLogin .modal-body, #forget .modal-body, #personal .modal-body, #enReg .modal-body {
+        padding: 0;
+    }
+
     .sec6 .sec2-btn-group {
         margin-top: 30px;
     }
@@ -585,6 +744,8 @@ p {
     .nav-tabs > li {
         margin-right: 20px;
         margin-bottom: 0;
+        float: none;
+        display: inline-block;
     }
 
     .nav-tabs > li:last-child {
@@ -763,11 +924,12 @@ p {
     .sec2-btn-group button {
         border: 1px solid #bebebe;
         color: #7c7c7c;
-        font-size: 24px;
+        font-size: 18px;
         background: #ffffff;
         border-radius: 30px;
         padding: 10px 60px;
         margin: 10px 20px 0;
+        width: 265px;
     }
 
 }

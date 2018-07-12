@@ -21,7 +21,185 @@
 </head>
 <body>
 
+<div class="modal fade" id="enLogin" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="enLogin">
+                    <h3>登录</h3>
+                    <input type="text" class="form-control" placeholder="请输入用户名">
+                    <input type="password" class="form-control" placeholder="请输入密码">
+                    <button type="submit" class="btn btn-default enLogin-btn">立即登录</button>
+                    <p>
+                        <a href="javascript:;" id="login-forget-btn" class="pull-left" data-toggle="modal"
+                           data-target="#forget">忘记密码</a>
+                        <a href="javascript:;" class="pull-right" data-toggle="modal"
+                           data-target="#enReg">立即注册</a>
+                    </p>
 
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="forget" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+
+                <div class="enLogin">
+                    <h3>找回密码</h3>
+                    <input type="text" class="form-control" placeholder="请输入手机号">
+                    <input type="password" class="form-control" placeholder="请输入短信验证码">
+                    <input type="text" class="form-control" placeholder="请输入新密码">
+                    <input type="text" class="form-control" placeholder="请再次输入新密码">
+                    <button type="submit" class="btn btn-default enLogin-btn">确认</button>
+                    <p>
+                        <a href="javascript:;" class="pull-left" data-toggle="modal"
+                           data-target="#enLogin">已有账号？</a>
+                        <a href="javascript:;" class="pull-right" data-toggle="modal"
+                           data-target="#enLogin">立即登录</a>
+                    </p>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="personal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+
+                <div class="enLogin">
+                    <h3>个人求职入口</h3>
+                    <p>如需求职找工作，请关注微信，并通过微信完善简历及寻找合适的岗位</p>
+                    <img src="images/er.jpg" alt="" width="300" height="300">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="enReg" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+
+                <div class="enLogin">
+                    <h3>企业注册</h3>
+
+                    <div class="form-group">
+                        <label class="col-sm-3 hidden-xs control-label"></label>
+                        <div class="col-sm-9 col-xs-12">
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1"
+                                           checked> 我是HR
+                                </label>
+                                <label>
+                                    <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2"> 我是猎头
+                                </label>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-sm-3 hidden-xs control-label">昵称</label>
+                        <div class="col-sm-9 col-xs-12">
+                            <input type="text" class="form-control" placeholder="请输入公司名称">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 hidden-xs control-label">手机号码</label>
+                        <div class="col-sm-9 col-xs-12">
+                            <input type="text" class="form-control" placeholder="请输入手机号码">
+                        </div>
+                    </div>
+                    <div class="form-group code">
+                        <label class="col-sm-3 hidden-xs control-label">短信验证码</label>
+                        <div class="col-sm-6 col-xs-9">
+                            <input type="text" class="form-control" placeholder="请输入短信验证码">
+                        </div>
+                        <div class="col-sm-3 col-xs-3">
+                            <button type="submit" class="btn btn-default enLogin-btn" style="margin: 0"><span
+                                    class="hidden-xs">获取</span>验证码
+                            </button>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="form-group">
+                        <label class="col-sm-3 hidden-xs control-label">用户密码</label>
+                        <div class="col-sm-9 col-xs-12">
+                            <input type="text" class="form-control" placeholder="请输入用户密码">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 hidden-xs control-label">确认密码</label>
+                        <div class="col-sm-9 col-xs-12">
+                            <input type="text" class="form-control" placeholder="请再次输入密码">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-default enLogin-btn" id="enRegSubmit">马上注册</button>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="tryOut" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="enLogin">
+                    <h3>注册试用请点此联系我们</h3>
+                    <div class="form-group">
+
+                        <div class="col-sm-6 col-xs-12 tryout-input1">
+                            <input type="text" class="form-control" placeholder="* 您的姓名">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-6 col-xs-12 tryout-input2">
+                            <input type="text" class="form-control" placeholder="* Email">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-6 col-xs-12 tryout-input1">
+                            <input type="text" class="form-control" placeholder="* 渠道/自媒体名称">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-6 col-xs-12 tryout-input2">
+                            <input type="text" class="form-control" placeholder="* 手机号">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <textarea class="form-control tryout-input3" rows="3" placeholder="* 留言信息" ></textarea>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-default enLogin-btn" id="tryOutSubmit"
+                                style="width: auto;">发送留言
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 <div id="fullpage">
     <div class="section active sec1">
         <div class="container">
@@ -39,19 +217,19 @@
                         </div>
                         <div class="collapse navbar-collapse nav-con" id="bs-example-navbar-collapse-1">
                             <ul class="nav navbar-nav navbar-right">
-                                <li class="active">
+                                <li data-toggle="modal" data-target="#personal">
                                     <a href="#">
                                         <h4>个人用户</h4>
                                         <p>Personal user</p>
                                     </a>
                                 </li>
-                                <li>
+                                <li data-toggle="modal" data-target="#enReg">
                                     <a href="#">
                                         <h4>企业注册</h4>
                                         <p>Register account</p>
                                     </a>
                                 </li>
-                                <li>
+                                <li data-toggle="modal" data-target="#enLogin">
                                     <a href="#">
                                         <h4>企业登录</h4>
                                         <p>Login</p>
@@ -94,7 +272,7 @@
                             <div class="content">
                                 <div class="img-num">
                                     <img src="images/全屏首页1_05-03.jpg" alt=""/>
-                                    <h4>01</h4>
+                                    <h4>02</h4>
                                 </div>
                                 <h3>企业招聘</h3>
                                 <p class="hidden-xs">
@@ -105,7 +283,7 @@
                             <div class="content">
                                 <div class="img-num">
                                     <img src="images/全屏首页1_05-03.jpg" alt=""/>
-                                    <h4>01</h4>
+                                    <h4>03</h4>
                                 </div>
                                 <h3>企业招聘</h3>
                                 <p class="hidden-xs">
@@ -116,7 +294,7 @@
                             <div class="content">
                                 <div class="img-num">
                                     <img src="images/全屏首页1_05-03.jpg" alt=""/>
-                                    <h4>01</h4>
+                                    <h4>04</h4>
                                 </div>
                                 <h3>企业招聘</h3>
                                 <p class="hidden-xs">
@@ -125,8 +303,8 @@
                         </li>
                     </ul>
                     <div class="sec2-btn-group">
-                        <button>立即注册试用</button>
-                        <button>立即注册试用</button>
+                        <button data-toggle="modal" data-target="#enReg">立即注册试用</button>
+                        <button data-toggle="modal" data-target="#tryOut">合伙人申请</button>
                     </div>
                 </div>
             </div>
@@ -482,6 +660,10 @@
     });
     $('#backTop').click(function () {
         $.fn.fullpage.moveTo(1);
+    });
+
+    $('#enLogin a,#forget a').click(function () {
+        $('.modal').modal('hide');
     });
 </script>
 </body>
