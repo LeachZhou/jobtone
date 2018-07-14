@@ -1,0 +1,391 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>周伯通</title>
+
+    <script src="https://cdn.bootcss.com/jquery/1.10.1/jquery.min.js"></script>
+    <link href="https://cdn.bootcss.com/fullPage.js/2.9.7/jquery.fullpage.min.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/fullPage.js/2.9.7/jquery.fullpage.min.js"></script>
+    <script src="https://cdn.bootcss.com/fullPage.js/2.9.7/jquery.fullpage.extensions.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="js.js"></script>
+</head>
+<body>
+
+<div class="modal fade" id="enLogin" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="enLogin">
+                    <h3>登录</h3>
+                    <input type="text" class="form-control" placeholder="请输入用户名">
+                    <input type="password" class="form-control" placeholder="请输入密码">
+                    <button type="submit" class="btn btn-default enLogin-btn">立即登录</button>
+                    <p>
+                        <a href="javascript:;" id="login-forget-btn" class="pull-left" data-toggle="modal"
+                           data-target="#forget">忘记密码</a>
+                        <a href="javascript:;" class="pull-right" data-toggle="modal"
+                           data-target="#enReg">立即注册</a>
+                    </p>
+
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="forget" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+
+                <div class="enLogin">
+                    <h3>找回密码</h3>
+                    <input type="text" class="form-control" placeholder="请输入手机号">
+                    <input type="password" class="form-control" placeholder="请输入短信验证码">
+                    <input type="text" class="form-control" placeholder="请输入新密码">
+                    <input type="text" class="form-control" placeholder="请再次输入新密码">
+                    <button type="submit" class="btn btn-default enLogin-btn">确认</button>
+                    <p>
+                        <a href="javascript:;" class="pull-left" data-toggle="modal"
+                           data-target="#enLogin">已有账号？</a>
+                        <a href="javascript:;" class="pull-right" data-toggle="modal"
+                           data-target="#enLogin">立即登录</a>
+                    </p>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="personal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+
+                <div class="enLogin">
+                    <h3>个人求职入口</h3>
+                    <p>如需求职找工作，请关注微信，并通过微信完善简历及寻找合适的岗位</p>
+                    <img src="images/er.jpg" alt="" width="300" height="300">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="enReg" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+
+                <div class="enLogin">
+                    <h3>企业注册</h3>
+
+                    <div class="form-group">
+                        <label class="col-sm-3 hidden-xs control-label"></label>
+                        <div class="col-sm-9 col-xs-12">
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1"
+                                           checked> 我是HR
+                                </label>
+                                <label>
+                                    <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2"> 我是猎头
+                                </label>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-sm-3 hidden-xs control-label">昵称</label>
+                        <div class="col-sm-9 col-xs-12">
+                            <input type="text" class="form-control" placeholder="请输入公司名称">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 hidden-xs control-label">手机号码</label>
+                        <div class="col-sm-9 col-xs-12">
+                            <input type="text" class="form-control" placeholder="请输入手机号码">
+                        </div>
+                    </div>
+                    <div class="form-group code">
+                        <label class="col-sm-3 hidden-xs control-label">短信验证码</label>
+                        <div class="col-sm-6 col-xs-9">
+                            <input type="text" class="form-control" placeholder="请输入短信验证码">
+                        </div>
+                        <div class="col-sm-3 col-xs-3">
+                            <button type="submit" class="btn btn-default enLogin-btn" style="margin: 0"><span
+                                    class="hidden-xs">获取</span>验证码
+                            </button>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="form-group">
+                        <label class="col-sm-3 hidden-xs control-label">用户密码</label>
+                        <div class="col-sm-9 col-xs-12">
+                            <input type="text" class="form-control" placeholder="请输入用户密码">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 hidden-xs control-label">确认密码</label>
+                        <div class="col-sm-9 col-xs-12">
+                            <input type="text" class="form-control" placeholder="请再次输入密码">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-default enLogin-btn" id="enRegSubmit">马上注册</button>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="section active sec1 new-sec1">
+    <div class="container">
+        <div class="row clearfix">
+            <div class="col-md-12 column">
+                <nav class="navbar navbar-default navbar-static-top" role="navigation">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse"
+                                data-target="#bs-example-navbar-collapse-1"><span class="sr-only">切换导航</span><span
+                                class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="index.html">
+                            <img class="logo" src="images/logo.png" alt="jobtone-logo">
+                        </a>
+                    </div>
+                    <div class="collapse navbar-collapse nav-con" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li data-toggle="modal" data-target="#personal">
+                                <a href="#">
+                                    <h4>个人用户</h4>
+                                    <p>Personal user</p>
+                                </a>
+                            </li>
+                            <li data-toggle="modal" data-target="#enReg">
+                                <a href="#">
+                                    <h4>企业注册</h4>
+                                    <p>Register account</p>
+                                </a>
+                            </li>
+                            <li data-toggle="modal" data-target="#enLogin">
+                                <a href="#">
+                                    <h4>企业登录</h4>
+                                    <p>Login</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </nav>
+            </div>
+        </div>
+    </div>
+    <div class="con layer">
+        <h1>招聘和人才的新路径</h1>
+        <p>A new forward for the recruitment & talents.</p>
+    </div>
+</div>
+<div class="clearfix"></div>
+<style>
+    html {
+        background: rgba(242, 242, 242, 0.71);
+    }
+
+    .new-sec1 {
+        background: #ffffff url(images/banner_04.jpg) center no-repeat;
+    }
+
+    .news-tab-content-list {
+        margin-top: 0px;
+        text-align: left;
+    }
+
+    .news-tab-content-list li:last-child {
+        border-bottom: 0;
+    }
+
+    .news-art-des h4 {
+        overflow: visible;
+        text-overflow: inherit;
+        white-space: normal;
+        margin-bottom: 20px;
+    }
+
+    .news-art-des p {
+        overflow: visible;
+        text-overflow: inherit;
+        display: block;
+        -webkit-line-clamp: 0;
+        -webkit-box-orient: initial;
+        line-height: 2;
+    }
+
+    .help-index {
+        width: 80px;
+        height: 80px;
+        color: #999999;
+        background: rgba(242, 242, 242, 0.71);
+        line-height: 80px;
+        text-align: center;
+        float: left;
+        margin-right: 20px;
+        margin-top: 10px;
+        font-size: 30px;
+    }
+</style>
+<div class="news-page">
+    <div class="container">
+        <div class="row">
+            <h2 class="news-title-zh col-md-12 col-xs-12">常见问题</h2>
+            <p class="news-title-en col-md-12 col-xs-12">Common problem</p>
+            <div class="col-md-12 col-xs-12 news-content">
+
+                <div id="myTabContent" class="tab-content">
+                    <ul class="news-tab-content-list">
+                        <li>
+                            <a href="newsdetail.html" class="news-art">
+                                <div class="help-index">
+                                    01
+                                </div>
+                                <div class="news-art-des">
+                                    <h4>
+                                        谁是周博通•招聘？
+                                    </h4>
+                                    <p>
+                                        周博通•招聘隶属于上海周珀通信息技术有限公司，致力于招聘平台的技术开发，商务拓展和人力资源服务。我们正在迎来一个人力资源和人力资源服务的新时代，超越妥协：更好，更快，更便宜 - 我们相信您可以拥有一切。
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="newsdetail.html" class="news-art">
+                                <div class="help-index">
+                                    02
+                                </div>
+                                <div class="news-art-des">
+                                    <h4>
+                                        周博通做什么？
+                                    </h4>
+                                    <p>
+                                        周博通利用过去十几年来人力资源服务领域的非凡收获的学科，流程和后见之明，将现代技术应用于人力资源管理的各个层面，从人才招聘到公司内部管理再到培训和绩效，以满足越来越多的中国企业-包括房地产，金融，法律，教育，工业和零售业发展。
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="newsdetail.html" class="news-art">
+                                <div class="help-index">
+                                    03
+                                </div>
+                                <div class="news-art-des">
+                                    <h4>
+                                        谁在周博通工作？
+                                    </h4>
+                                    <p>
+                                        我们的创始人尼古拉斯•博通是一位经验丰富的人力资源专家兼ShawDe Capital的创始人。他曾供职于SK、江苏津通集团、福建金帝集团。他希望把周博通打造成为中国最具发展潜力的科技公司之一。
+                                        <br>
+                                        我们的团队拥有来自SK集团下属子集团、百度、IBM、盛大、金盛保险、万达信息技术以及其他领先公司的人才，我们的团队结合了平台架构，产品设计，平台技术和人力资源整体解决方案的专业知识，提供人力资源服务+互联网的整体解决方案。
+                                        <br>
+                                        今天，我们在全国拥有超过3000+事业合伙人。
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="newsdetail.html" class="news-art">
+                                <div class="help-index">
+                                    04
+                                </div>
+                                <div class="news-art-des">
+                                    <h4>
+                                        周博通有什么不同？
+                                    </h4>
+                                    <p>
+                                        一个区别是我们具有人力资源服务链的专业知识；另一个是我们如何构建：我们正在整合人力资源招聘SaaS，人力资源职业征信SaaS，人力资源测评SaaS、人力资源Payroll SaaS，企业人力资源弹性福利平台，这是与其他SaaS服务提供公司一起联合完成。最后，我们正在重新思考企业管理整个过程，并尽可能使用技术对其进行现代化改造。这三项资产的结合使我们脱颖而出并推动了迄今为止的巨大增长。
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="newsdetail.html" class="news-art">
+                                <div class="help-index">
+                                    05
+                                </div>
+                                <div class="news-art-des">
+                                    <h4>
+                                        我可以投资周博通吗？
+
+                                    </h4>
+                                    <p>
+                                        目前周博通可以接受新的投资者。
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="newsdetail.html" class="news-art">
+                                <div class="help-index">
+                                    06
+                                </div>
+                                <div class="news-art-des">
+                                    <h4>
+                                        我可以成为周博通的事业合伙人吗？
+
+                                    </h4>
+                                    <p>
+                                        只要您具有BD企业的意愿，随时可以申请成为我们的事业合伙人。
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="news-footer">
+    <div class="news-footer-qr">
+        <img src="images/er.jpg" alt="">
+        <p>如果您有任何问题或建议，请随时联系我们！</p>
+        <p>If you have any questions or suggestions, please contact us any time.</p>
+    </div>
+    <div class="news-footer-copy">
+        <p><a href="about.html">关于我们</a> | <a href="news.html">最新消息</a> | <a href="help.html">常见问题</a> <br>
+            版权所有© 周博通. 沪ICP备15006236号-1 沪公网安备 31011002001104号</p>
+    </div>
+</div>
+
+
+<script>
+    $('#enLogin a,#forget a').click(function () {
+        $('.modal').modal('hide');
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>周伯通</title>
+
+    <script src="https://cdn.bootcss.com/jquery/1.10.1/jquery.min.js"></script>
+    <link href="https://cdn.bootcss.com/fullPage.js/2.9.7/jquery.fullpage.min.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/fullPage.js/2.9.7/jquery.fullpage.min.js"></script>
+    <script src="https://cdn.bootcss.com/fullPage.js/2.9.7/jquery.fullpage.extensions.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="js.js"></script>
+</head>
+<body>
+
+<div class="modal fade" id="enLogin" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="enLogin">
+                    <h3>登录</h3>
+                    <input type="text" class="form-control" placeholder="请输入用户名">
+                    <input type="password" class="form-control" placeholder="请输入密码">
+                    <button type="submit" class="btn btn-default enLogin-btn">立即登录</button>
+                    <p>
+                        <a href="javascript:;" id="login-forget-btn" class="pull-left" data-toggle="modal"
+                           data-target="#forget">忘记密码</a>
+                        <a href="javascript:;" class="pull-right" data-toggle="modal"
+                           data-target="#enReg">立即注册</a>
+                    </p>
+
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="forget" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+
+                <div class="enLogin">
+                    <h3>找回密码</h3>
+                    <input type="text" class="form-control" placeholder="请输入手机号">
+                    <input type="password" class="form-control" placeholder="请输入短信验证码">
+                    <input type="text" class="form-control" placeholder="请输入新密码">
+                    <input type="text" class="form-control" placeholder="请再次输入新密码">
+                    <button type="submit" class="btn btn-default enLogin-btn">确认</button>
+                    <p>
+                        <a href="javascript:;" class="pull-left" data-toggle="modal"
+                           data-target="#enLogin">已有账号？</a>
+                        <a href="javascript:;" class="pull-right" data-toggle="modal"
+                           data-target="#enLogin">立即登录</a>
+                    </p>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="personal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+
+                <div class="enLogin">
+                    <h3>个人求职入口</h3>
+                    <p>如需求职找工作，请关注微信，并通过微信完善简历及寻找合适的岗位</p>
+                    <img src="images/er.jpg" alt="" width="300" height="300">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="enReg" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+
+                <div class="enLogin">
+                    <h3>企业注册</h3>
+
+                    <div class="form-group">
+                        <label class="col-sm-3 hidden-xs control-label"></label>
+                        <div class="col-sm-9 col-xs-12">
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1"
+                                           checked> 我是HR
+                                </label>
+                                <label>
+                                    <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2"> 我是猎头
+                                </label>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-sm-3 hidden-xs control-label">昵称</label>
+                        <div class="col-sm-9 col-xs-12">
+                            <input type="text" class="form-control" placeholder="请输入公司名称">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 hidden-xs control-label">手机号码</label>
+                        <div class="col-sm-9 col-xs-12">
+                            <input type="text" class="form-control" placeholder="请输入手机号码">
+                        </div>
+                    </div>
+                    <div class="form-group code">
+                        <label class="col-sm-3 hidden-xs control-label">短信验证码</label>
+                        <div class="col-sm-6 col-xs-9">
+                            <input type="text" class="form-control" placeholder="请输入短信验证码">
+                        </div>
+                        <div class="col-sm-3 col-xs-3">
+                            <button type="submit" class="btn btn-default enLogin-btn" style="margin: 0"><span
+                                    class="hidden-xs">获取</span>验证码
+                            </button>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="form-group">
+                        <label class="col-sm-3 hidden-xs control-label">用户密码</label>
+                        <div class="col-sm-9 col-xs-12">
+                            <input type="text" class="form-control" placeholder="请输入用户密码">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 hidden-xs control-label">确认密码</label>
+                        <div class="col-sm-9 col-xs-12">
+                            <input type="text" class="form-control" placeholder="请再次输入密码">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-default enLogin-btn" id="enRegSubmit">马上注册</button>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="section active sec1 new-sec1">
+    <div class="container">
+        <div class="row clearfix">
+            <div class="col-md-12 column">
+                <nav class="navbar navbar-default navbar-static-top" role="navigation">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse"
+                                data-target="#bs-example-navbar-collapse-1"><span class="sr-only">切换导航</span><span
+                                class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="index.html">
+                            <img class="logo" src="images/logo.png" alt="jobtone-logo">
+                        </a>
+                    </div>
+                    <div class="collapse navbar-collapse nav-con" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li data-toggle="modal" data-target="#personal">
+                                <a href="#">
+                                    <h4>个人用户</h4>
+                                    <p>Personal user</p>
+                                </a>
+                            </li>
+                            <li data-toggle="modal" data-target="#enReg">
+                                <a href="#">
+                                    <h4>企业注册</h4>
+                                    <p>Register account</p>
+                                </a>
+                            </li>
+                            <li data-toggle="modal" data-target="#enLogin">
+                                <a href="#">
+                                    <h4>企业登录</h4>
+                                    <p>Login</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </nav>
+            </div>
+        </div>
+    </div>
+    <div class="con layer">
+        <h1>致力于品牌 + 整合营销服务</h1>
+        <p>Commitment to brand + integrated marketing service.</p>
+    </div>
+</div>
+<div class="clearfix"></div>
+<style>
+    html {
+        background: rgba(242, 242, 242, 0.71);
+    }
+
+    .new-sec1 {
+        background: #ffffff url(images/banner_05.jpg) center no-repeat;
+    }
+
+</style>
+
+<div class="about-page">
+    <div class="container">
+        <div class="row">
+            <h2 class="news-title-zh col-md-12 col-xs-12">关于我们</h2>
+            <p class="news-title-en col-md-12 col-xs-12">About Us</p>
+            <div class="col-md-12 col-xs-12 ">
+
+                <div class="aboutus">
+                    <img src="images/about_us.jpg" alt="" class="col-md-5 col-xs-12">
+                    <ul class="col-md-7 col-xs-12">
+                        <li>
+                            周博通•招聘隶属于上海周珀通信息技术有限公司。平台采用流行的众包（Crowdsourcing）模式，企业通过周博通•招聘发布招聘信息，然后通过在线悬赏的方法，吸引招聘企业周围的人脉资源或社会上招聘顾问来协助企业完成招聘任务，实现社会招聘力量参与解决企业招聘难题。
+                        </li>
+                        <li>
+                            企业借助周博通•招聘的“人力资源招聘+互联网+众包”的模式，可以极大的提高招聘效率和招聘质量，同时大幅度的降低招聘的时间成本与资金成本。企业可以获得人脉推荐或专业招聘顾问的推荐服务，同时把招聘成本降低至传统猎头服务的1/3，RPO服务的1/2，性价比非常高。
+                        </li>
+                        <li>
+                            人才推荐顾问主要来自SOHO猎头顾问、企业HR以及各行业的资深人士。通过行业属性及能力标签的匹配，每个招聘顾问可以选择自己最为擅长的职位为企业进行人才推荐，协助企业实现快速有效地招聘。
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<div class="about-page clearfix">
+    <div class="col-md-12 col-xs-12">
+
+        <div class="team">
+            <div class="team-bg">
+                <div class="container">
+                    <div class="row">
+                        <div class="team-con">
+                            <img src="images/about_two.jpg" alt="" class="col-md-7 col-xs-12">
+                            <div class="col-md-5 col-xs-12 team-con-des">
+                                <h3>我们的团队</h3>
+                                <div>Our Team</div>
+                                <p>人才推荐顾问主要来自SOHO猎头顾问、企业HR以及各行业的资深人士。通过行业属性及能力标签的匹配，每个招聘顾问可以选择自己最为擅长的职位为企业进行人才推荐，协助企业实现快速有效地招聘。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="about-page clearfix">
+    <div class="container">
+        <div class="row">
+            <h2 class="news-title-zh col-md-12 col-xs-12">联系我们</h2>
+            <p class="news-title-en col-md-12 col-xs-12">Contact Us</p>
+            <div class="col-md-12 col-xs-12 ">
+
+                <div class="aboutus-contact">
+                    <ul>
+                        <li class="col-md-4 col-xs-12">
+                            <img src="images/contact_01.png" alt="">
+                            <p>+86 21-61527558</p>
+                        </li>
+                        <li class="col-md-4 col-xs-12">
+                            <img src="images/contact_02.png" alt="">
+                            <p>hr@021.com</p>
+                        </li>
+                        <li class="col-md-4 col-xs-12">
+                            <img src="images/contact_03.png" alt="">
+                            <p>上海市杨浦区伟德路6号云海大厦8楼</p>
+                        </li>
+
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="news-footer">
+    <div class="news-footer-qr">
+        <img src="images/er.jpg" alt="">
+        <p>如果您有任何问题或建议，请随时联系我们！</p>
+        <p>If you have any questions or suggestions, please contact us any time.</p>
+    </div>
+    <div class="news-footer-copy">
+        <p><a href="about.html">关于我们</a> | <a href="news.html">最新消息</a> | <a href="help.html">常见问题</a> <br>
+            版权所有© 周博通. 沪ICP备15006236号-1 沪公网安备 31011002001104号</p>
+    </div>
+</div>
+
+
+<script>
+    $('#enLogin a,#forget a').click(function () {
+        $('.modal').modal('hide');
+    });
+</script>
+</body>
+</html>

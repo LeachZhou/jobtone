@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>周伯通</title>
+
+    <script src="https://cdn.bootcss.com/jquery/1.10.1/jquery.min.js"></script>
+    <link href="https://cdn.bootcss.com/fullPage.js/2.9.7/jquery.fullpage.min.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/fullPage.js/2.9.7/jquery.fullpage.min.js"></script>
+    <script src="https://cdn.bootcss.com/fullPage.js/2.9.7/jquery.fullpage.extensions.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="js.js"></script>
+</head>
+<body>
+
+<div class="modal fade" id="enLogin" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="enLogin">
+                    <h3>登录</h3>
+                    <input type="text" class="form-control" placeholder="请输入用户名">
+                    <input type="password" class="form-control" placeholder="请输入密码">
+                    <button type="submit" class="btn btn-default enLogin-btn">立即登录</button>
+                    <p>
+                        <a href="javascript:;" id="login-forget-btn" class="pull-left" data-toggle="modal"
+                           data-target="#forget">忘记密码</a>
+                        <a href="javascript:;" class="pull-right" data-toggle="modal"
+                           data-target="#enReg">立即注册</a>
+                    </p>
+
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="forget" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+
+                <div class="enLogin">
+                    <h3>找回密码</h3>
+                    <input type="text" class="form-control" placeholder="请输入手机号">
+                    <input type="password" class="form-control" placeholder="请输入短信验证码">
+                    <input type="text" class="form-control" placeholder="请输入新密码">
+                    <input type="text" class="form-control" placeholder="请再次输入新密码">
+                    <button type="submit" class="btn btn-default enLogin-btn">确认</button>
+                    <p>
+                        <a href="javascript:;" class="pull-left" data-toggle="modal"
+                           data-target="#enLogin">已有账号？</a>
+                        <a href="javascript:;" class="pull-right" data-toggle="modal"
+                           data-target="#enLogin">立即登录</a>
+                    </p>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="personal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+
+                <div class="enLogin">
+                    <h3>个人求职入口</h3>
+                    <p>如需求职找工作，请关注微信，并通过微信完善简历及寻找合适的岗位</p>
+                    <img src="images/er.jpg" alt="" width="300" height="300">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="enReg" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+
+                <div class="enLogin">
+                    <h3>企业注册</h3>
+
+                    <div class="form-group">
+                        <label class="col-sm-3 hidden-xs control-label"></label>
+                        <div class="col-sm-9 col-xs-12">
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1"
+                                           checked> 我是HR
+                                </label>
+                                <label>
+                                    <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2"> 我是猎头
+                                </label>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-sm-3 hidden-xs control-label">昵称</label>
+                        <div class="col-sm-9 col-xs-12">
+                            <input type="text" class="form-control" placeholder="请输入公司名称">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 hidden-xs control-label">手机号码</label>
+                        <div class="col-sm-9 col-xs-12">
+                            <input type="text" class="form-control" placeholder="请输入手机号码">
+                        </div>
+                    </div>
+                    <div class="form-group code">
+                        <label class="col-sm-3 hidden-xs control-label">短信验证码</label>
+                        <div class="col-sm-6 col-xs-9">
+                            <input type="text" class="form-control" placeholder="请输入短信验证码">
+                        </div>
+                        <div class="col-sm-3 col-xs-3">
+                            <button type="submit" class="btn btn-default enLogin-btn" style="margin: 0"><span
+                                    class="hidden-xs">获取</span>验证码
+                            </button>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="form-group">
+                        <label class="col-sm-3 hidden-xs control-label">用户密码</label>
+                        <div class="col-sm-9 col-xs-12">
+                            <input type="text" class="form-control" placeholder="请输入用户密码">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 hidden-xs control-label">确认密码</label>
+                        <div class="col-sm-9 col-xs-12">
+                            <input type="text" class="form-control" placeholder="请再次输入密码">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-default enLogin-btn" id="enRegSubmit">马上注册</button>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="section active sec1 new-sec1">
+    <div class="container">
+        <div class="row clearfix">
+            <div class="col-md-12 column">
+                <nav class="navbar navbar-default navbar-static-top" role="navigation">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse"
+                                data-target="#bs-example-navbar-collapse-1"><span class="sr-only">切换导航</span><span
+                                class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="index.html">
+                            <img class="logo" src="images/logo.png" alt="jobtone-logo">
+                        </a>
+                    </div>
+                    <div class="collapse navbar-collapse nav-con" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li data-toggle="modal" data-target="#personal">
+                                <a href="#">
+                                    <h4>个人用户</h4>
+                                    <p>Personal user</p>
+                                </a>
+                            </li>
+                            <li data-toggle="modal" data-target="#enReg">
+                                <a href="#">
+                                    <h4>企业注册</h4>
+                                    <p>Register account</p>
+                                </a>
+                            </li>
+                            <li data-toggle="modal" data-target="#enLogin">
+                                <a href="#">
+                                    <h4>企业登录</h4>
+                                    <p>Login</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </nav>
+            </div>
+        </div>
+    </div>
+    <div class="con layer">
+        <h1>招聘和人才的新路径</h1>
+        <p>A new forward for the recruitment & talents.</p>
+    </div>
+</div>
+<div class="clearfix"></div>
+<style>
+    html {
+        background: rgba(242, 242, 242, 0.71);
+    }
+
+    .new-sec1 {
+        background: #ffffff url(images/banner_07.jpg) center no-repeat;
+    }
+</style>
+
+<div class="container">
+    <div class="row">
+        <div class="newsdetail-con">
+            <h3>95后的就业季找工作不能再等等看</h3>
+            <div class="newsdetail-time">
+                <span>时间：2018年06月25日</span>
+                <span>作者：小心</span>
+                <span>来源：原创</span>
+            </div>
+            <p class="newsdetail-art">
+                2018年又是一个史上最难就业季，全国普通高校毕业生预计有800多万人（不包括其他学生，如研究生，博士生）。全新的“95后”毕业生继将开始走向职场。从相关的就业调查报告中我们可以发现，很多“95后”的择业观念不是太强，面对着较强的社会就业压力，有很多毕业生选择多样化就业，继续考研或出国留学深造。很多选择就业同学也持一种“观望”“再等等看”的态度。
+                <br><br>
+                在一些人才市场招聘会现场，企业的招聘人员可以说是使出浑身解数只为了吸引更多的学生来应聘。各大企业给出的待遇也是五花八门，层出不穷，什么“带薪休假”、“伙食补贴”等等优惠条件，但是来应聘的毕业生同学也并不多。
+                <br><br>
+                在某高校的校园招聘会上，很多学生虽然有对口的专业，企业给的工作待遇也还不错，但是在与现场企业招聘人员简单的聊了几分钟后就离开了，为什么有好的企业招聘不深入了解呢？
+                <br><br>
+                经过了解之后才发现，大多人是来看行情的，意思就是来试水的，并不急于就业，要等到最后做了充分的比较之后再进行选择，这可能跟“95后”自主意识的加强是相关的，他们现在不急于盲目去签约，而是选择适合自己的工作，满意的才签约。
+                <br><br>
+                看着招聘会整体的人数并不多，经过了解后才发现，还有一部分同学已经加如“考研大军”和“国考大军”等阵营中，所以使往年一场热闹的招聘会现场显得稍微冷清了些。
+                <br><br>
+                别因个性错过机会
+                <br><br>
+                从各项调查中我们可以看出，“95后”毕业生是一群有着独特个性的学生，有着自己比较成熟的想法，大部分也是家里唯一的子女，对经济方面的压力不是太强，但是高不成，低不就也是他们心中一直的想法，有很多的“95后”青年也选择自主创业，希望通过自己的创业来摆脱传统的朝九晚五的就业。
+                <br><br>
+                在一份新《2017年大学生求职指南》报告中显示，有73.5%的毕业生选择找工作，而剩下的26.5%的同学选择毕业后“不就业”，除了继续深造，去向五花八门。调查显示，这近1/3部分学生都有来自家庭的经济支撑，而“95后”大学生这一趋势更加明显，造成这一现象的原因可能是现在的社会环境，生活质量越来越好了，所以同学们可能不光看向安家立命了，想着我既然是独生子女，有父母的支撑，我想看看我父母那一辈没有做成的事情，有没有办法实现的，做一些更有价值更有意义，更能实现人生理想的事情。
+                <br><br>
+                我省一所高校招生就业处处长就表示，还是希望毕业生们能有一个正确的就业与择业观念，“95后”个性独立，有一些想法可以理解，但是一旦有合适的就业机会，还是应该大胆去尝试，错过了最佳的就业机会和时机，以后的路也不一定好走。
+                <br><br>
+            </p>
+            <div class="newsdetail-art-bottom">
+                <span class="newsdetail-next">下一篇 <a href="#">业季找不到95后的到</a></span>
+                <span class="newsdetail-type pull-right">分类：行业报道</span>
+            </div>
+            <div class="newsdetail-share">
+                <span>分享到：</span>
+                <span>
+                    <img src="images/wei.png" alt="">
+                </span>
+                <span>
+                    <img src="images/bo.png" alt="">
+                </span>
+                <span>
+                    <img src="images/ko.png" alt="">
+                </span>
+                <span>
+                    <img src="images/do.png" alt="">
+                </span>
+                <span>
+                    <img src="images/tie.png" alt="">
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="news-footer">
+    <div class="news-footer-qr">
+        <img src="images/er.jpg" alt="">
+        <p>如果您有任何问题或建议，请随时联系我们！</p>
+        <p>If you have any questions or suggestions, please contact us any time.</p>
+    </div>
+    <div class="news-footer-copy">
+        <p><a href="about.html">关于我们</a> | <a href="news.html">最新消息</a> | <a href="help.html">常见问题</a> <br>
+            版权所有© 周博通. 沪ICP备15006236号-1 沪公网安备 31011002001104号</p>
+    </div>
+</div>
+
+
+<script>
+    $('#enLogin a,#forget a').click(function () {
+        $('.modal').modal('hide');
+    });
+</script>
+</body>
+</html>
