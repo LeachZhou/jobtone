@@ -1021,6 +1021,10 @@ p {
     box-shadow: none !important;
 }
 
+.newsdetail-art img {
+    width: 100%;
+}
+
 @media (max-width: 768px) {
     .sec2 li .content {
         border: 1px solid #d6d6d6;
