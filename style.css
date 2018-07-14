@@ -1165,7 +1165,7 @@ p {
     }
 
     .nav-tabs > li {
-        margin-right: 18px;
+        margin-right: 10px;
         margin-bottom: 0;
         float: none;
         display: inline-block;
@@ -1407,6 +1407,8 @@ p {
     .help-art-des {
         width: calc(100% - 75px) !important;
     }
+
+
 
 }
 
