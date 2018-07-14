@@ -1409,24 +1409,43 @@ p {
     }
 
     .sec2 li h3 {
-        margin: 10px 0 10px;
+        margin: 10px 0 10px !important;
     }
 
     .sec2 ul {
-        padding-top: 5px;
-        margin-bottom: 0px;
+        padding-top: 5px !important;
+        margin-bottom: 0px !important;
     }
 
     .sec2 .des {
         margin-top: 0;
-        padding: 5px 15px;
+        padding: 5px 15px !important;
     }
 
     .title-en {
-        margin-top: 5px;
-        margin-bottom: 5px;
+        margin-top: 5px !important;
+        margin-bottom: 5px !important;
     }
 
+    .sec5 .des .des-right {
+        height: 260px !important;
+    }
+
+    .sec5 .des .des-left {
+        height: 260px !important;
+    }
+
+    .sec5 {
+        height: calc(100% - 120px) !important;
+    }
+
+    .sec5-title .title-zh {
+        margin-top: 25px !important;
+    }
+
+    .sec5-title {
+        height: 120px !important;
+    }
 }
 
 @media (max-width: 320px) {
