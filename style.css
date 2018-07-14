@@ -1017,8 +1017,8 @@ p {
 }
 
 .form-control {
-    -webkit-box-shadow: none;
-    box-shadow: none;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
 }
 
 @media (max-width: 768px) {
