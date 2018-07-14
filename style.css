@@ -1446,6 +1446,11 @@ p {
     .sec5-title {
         height: 120px !important;
     }
+
+    .aboutus-contact img {
+        width: 55px !important;
+        height: 55px !important;
+    }
 }
 
 @media (max-width: 320px) {
