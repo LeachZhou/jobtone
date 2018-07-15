@@ -29,7 +29,7 @@ p {
 }
 
 .sec1 {
-    background: #ffffff url("images/banner_01.jpg") center no-repeat;
+    background: #ffffff url("../images/banner_01.jpg") center no-repeat;
     background-size: cover;
 }
 
@@ -264,7 +264,7 @@ p {
 }
 
 .sec3 {
-    background: #ffffff url("images/banner_02.jpg") center no-repeat;
+    background: #ffffff url("../images/banner_02.jpg") center no-repeat;
     background-size: cover;
     color: #ffffff;
 }
@@ -328,27 +328,27 @@ p {
 }
 
 .sec4 .item .back1 {
-    background: #ffffff url("images/advantage1_15.jpg") center no-repeat;
+    background: #ffffff url("../images/advantage1_15.jpg") center no-repeat;
 }
 
 .sec4 .item .back2 {
-    background: #ffffff url("images/advantage1_17.jpg") center no-repeat;
+    background: #ffffff url("../images/advantage1_17.jpg") center no-repeat;
 }
 
 .sec4 .item .back3 {
-    background: #ffffff url("images/advantage1_19.jpg") center no-repeat;
+    background: #ffffff url("../images/advantage1_19.jpg") center no-repeat;
 }
 
 .sec4 .item .back4 {
-    background: #ffffff url("images/advantage1_23.jpg") center no-repeat;
+    background: #ffffff url("../images/advantage1_23.jpg") center no-repeat;
 }
 
 .sec4 .item .back5 {
-    background: #ffffff url("images/advantage1_24.jpg") center no-repeat;
+    background: #ffffff url("../images/advantage1_24.jpg") center no-repeat;
 }
 
 .sec4 .item .back6 {
-    background: #ffffff url("images/advantage1_25.jpg") center no-repeat;
+    background: #ffffff url("../images/advantage1_25.jpg") center no-repeat;
 }
 
 .sec4 .item .back .con {
@@ -390,7 +390,7 @@ p {
 .sec5 {
     position: relative;
     height: calc(100% - 200px);
-    background: #ffffff url("images/future.jpg") center no-repeat;
+    background: #ffffff url("../images/future.jpg") center no-repeat;
     background-size: cover;
 }
 
@@ -443,7 +443,7 @@ p {
 }
 
 .sec7 {
-    background: #ffffff url("images/banner_03.jpg") center no-repeat;
+    background: #ffffff url("../images/banner_03.jpg") center no-repeat;
     background-size: cover;
     color: #ffffff;
 }
@@ -722,7 +722,7 @@ p {
 .new-sec1 {
     position: relative;
     height: 600px;
-    background: #ffffff url(images/banner_06.jpg) center no-repeat;
+    background: #ffffff url(../images/banner_06.jpg) center no-repeat;
     background-size: cover;
 }
 
@@ -942,7 +942,7 @@ p {
 }
 
 .team-bg {
-    background: #ffffff url(images/banner_08.jpg) center no-repeat;
+    background: #ffffff url(../images/banner_08.jpg) center no-repeat;
     background-size: cover;
     height: 299px;
     width: 100%;
